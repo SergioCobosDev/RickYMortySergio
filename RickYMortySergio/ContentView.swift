@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var vm = CharacterListViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(vm.characters) { character in
+                Text(character.name)
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: .previewVM)
 }
