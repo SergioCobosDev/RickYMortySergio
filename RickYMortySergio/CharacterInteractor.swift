@@ -8,17 +8,21 @@
 import Foundation
 
 protocol CharacterInteractorProtocol {
-    func fetchCharacters() async throws -> CharacterResponseDTO
+    func fetchCharacters(page: Int) async throws -> CharacterResponseDTO
 }
 
-struct CharacterInteractor: CharacterInteractorProtocol {
+struct CharacterInteractor: CharacterInteractorProtocol, NetworkInteractor {
+    
+    var session: URLSession
     
     static let shared = CharacterInteractor()
     
-    private init() {}
+    private init(session: URLSession = .shared) {
+        self.session = session
+    }
     
-    func fetchCharacters() async throws -> CharacterResponseDTO {
-        
+    func fetchCharacters(page: Int) async throws -> CharacterResponseDTO {
+        try await getJSONFromURL(request: .get(url: .getCharacterURL, page: page), type: CharacterResponseDTO.self)
     }
     
 //    func fetchCharacters() async throws -> CharacterResponseDTO {

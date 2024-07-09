@@ -23,6 +23,7 @@
 		31C2BB3A2BDAAE46000ED8E4 /* RickYMortySergioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2BB392BDAAE46000ED8E4 /* RickYMortySergioUITestsLaunchTests.swift */; };
 		31C2BB4C2BDAAF05000ED8E4 /* CharacterModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2BB4B2BDAAF05000ED8E4 /* CharacterModelDTO.swift */; };
 		31C2BB4E2BDAB366000ED8E4 /* CharacterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C2BB4D2BDAB366000ED8E4 /* CharacterInteractor.swift */; };
+		31E06A742C3DE64600942352 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E06A732C3DE64600942352 /* URLRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		31C2BB392BDAAE46000ED8E4 /* RickYMortySergioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickYMortySergioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		31C2BB4B2BDAAF05000ED8E4 /* CharacterModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelDTO.swift; sourceTree = "<group>"; };
 		31C2BB4D2BDAB366000ED8E4 /* CharacterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInteractor.swift; sourceTree = "<group>"; };
+		31E06A732C3DE64600942352 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				31C2BB4D2BDAB366000ED8E4 /* CharacterInteractor.swift */,
 				31B854FB2C38A63D001F9E26 /* URL.swift */,
 				31B854FD2C38A975001F9E26 /* URLSession.swift */,
+				31E06A732C3DE64600942352 /* URLRequest.swift */,
 				31B854FF2C38AD69001F9E26 /* NetworkInteractor.swift */,
 			);
 			name = Interactor;
@@ -350,6 +353,7 @@
 				31C2BB1F2BDAAE44000ED8E4 /* ContentView.swift in Sources */,
 				31B855002C38AD69001F9E26 /* NetworkInteractor.swift in Sources */,
 				31C2BB1D2BDAAE44000ED8E4 /* RickYMortySergioApp.swift in Sources */,
+				31E06A742C3DE64600942352 /* URLRequest.swift in Sources */,
 				31B854FC2C38A63D001F9E26 /* URL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
