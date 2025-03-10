@@ -16,10 +16,25 @@ enum HTTPMethod: String {
 }
 
 extension URLRequest {
-    static func get(url: URL, method: HTTPMethod = .get, page: Int) -> URLRequest {
+    static func get(url: URL, method: HTTPMethod = .get, page: Int, name: String, gender: String) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        request.url?.append(queryItems: [URLQueryItem(name: "page", value: "\(page)")])
+        request.url?.append(queryItems: [.page(page), .name(name), .gender(gender)] )
+        print(request)
         return request
+    }
+}
+
+extension URLQueryItem {
+    static func page(_ page: Int) -> URLQueryItem {
+        URLQueryItem(name: "page", value: "\(page)")
+    }
+    
+    static func name(_ name: String) -> URLQueryItem {
+        URLQueryItem(name: "name", value: name)
+    }
+    
+    static func gender(_ gender: String) -> URLQueryItem {
+        URLQueryItem(name: "gender", value: gender)
     }
 }

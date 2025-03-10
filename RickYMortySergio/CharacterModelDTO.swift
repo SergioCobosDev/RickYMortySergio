@@ -18,7 +18,7 @@ struct Info: Codable {
     let prev: String?
 }
 
-struct RyMCharacterDTO: Codable, Identifiable {
+struct RyMCharacterDTO: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let status: Status
@@ -29,15 +29,26 @@ struct RyMCharacterDTO: Codable, Identifiable {
     let created: String
 }
 
-enum Gender: String, Codable {
+enum Gender: String, Codable, CaseIterable, Identifiable {
+    var id: Self {self}
     case female = "Female"
     case male = "Male"
     case unknown = "unknown"
+    case genderless = "Genderless"
+    case all = "all"
 }
 
 enum Species: String, Codable {
     case alien = "Alien"
     case human = "Human"
+    case humanoid = "Humanoid"
+    case mythologicalCreature = "Mythological Creature"
+    case animal = "Animal"
+    case robot = "Robot"
+    case poopybutthole = "Poopybutthole"
+    case cronenberg = "Cronenberg"
+    case disease = "Disease"
+    case unknown = "unknown"
 }
 
 enum Status: String, Codable {
